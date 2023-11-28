@@ -1,4 +1,10 @@
-import { Container, NavBar, Content, NavBarElement } from "components";
+import {
+  Container,
+  NavBar,
+  Content,
+  NavBarElement,
+  CardWrapper,
+} from "components";
 import { ActiveScreen } from "interfaces";
 import { useState } from "react";
 
@@ -11,7 +17,10 @@ const App = () => {
   return (
     <Container gradient={gradient}>
       <Content>
-        <div></div>
+        <CardWrapper>1d</CardWrapper>
+        <CardWrapper>2d</CardWrapper>
+        <CardWrapper>3d</CardWrapper>
+        <CardWrapper>4d</CardWrapper>
       </Content>
       <NavBar>
         <NavBarElement
