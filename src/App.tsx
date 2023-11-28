@@ -1,14 +1,63 @@
+import { Container, NavBar, Content, NavBarElement } from "components";
+import { ActiveScreen } from "interfaces";
+import { useState } from "react";
+
 const App = () => {
+  const [active] = useState<ActiveScreen>({
+    currentIndex: 1,
+    background: "sm:to-violet-900",
+  });
+  const [gradient, setGradient] = useState<String>("sm:to-violet-900");
   return (
-    <div className="h-screen w-screen flex flex-col-reverse text-white lg:flex-row  bg-black lg:bg-gradient-to-r sm:bg-gradient-to-t sm:from-black sm:from-60%  sm:to-violet-900 ">
-      <div className="basis-[95%] lg:basis-3/5 "></div>
-      <div className="basis-[5%] flex flex-row items-center lg:items-start lg:basis-2/5 gap-2 lg:flex-col lg:justify-center lg: ml-20">
-        <p>hello</p>
-        <p>hello as</p>
-        <p>hello asdasd</p>
-        <p>hello asdasdasd</p>
-      </div>
-    </div>
+    <Container gradient={gradient}>
+      <Content>
+        <div></div>
+      </Content>
+      <NavBar>
+        <NavBarElement
+          setBackground={() => {
+            console.log("hi");
+            setGradient("sm:to-violet-800");
+          }}
+          setDefaultBackground={() => {
+            console.log("bye");
+            setGradient(active.background);
+          }}
+        >
+          Introduction
+        </NavBarElement>
+        <NavBarElement
+          setBackground={() => {
+            setGradient("sm:to-indigo-800");
+          }}
+          setDefaultBackground={() => {
+            setGradient(active.background);
+          }}
+        >
+          Work Experience
+        </NavBarElement>
+        <NavBarElement
+          setBackground={() => {
+            setGradient("sm:to-orange-900");
+          }}
+          setDefaultBackground={() => {
+            setGradient(active.background);
+          }}
+        >
+          Chat With AI
+        </NavBarElement>
+        <NavBarElement
+          setBackground={() => {
+            setGradient("sm:to-rose-900");
+          }}
+          setDefaultBackground={() => {
+            setGradient(active.background);
+          }}
+        >
+          Contact me
+        </NavBarElement>
+      </NavBar>
+    </Container>
   );
 };
 

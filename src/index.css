@@ -6,3 +6,10 @@ body {
   margin: 0px;
   padding: 0px;
 }
+:root {
+  --container-grad-base: #4d39a6;
+  --container-grad-intro: #0f1a5b;
+  --container-grad-exp: #aa4111;
+  --container-grad-chat: #6e0353;
+  --container-grad-contact: #2a0636;
+}
