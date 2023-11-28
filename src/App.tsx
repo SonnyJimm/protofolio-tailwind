@@ -25,11 +25,9 @@ const App = () => {
       <NavBar>
         <NavBarElement
           setBackground={() => {
-            console.log("hi");
             setGradient("sm:to-violet-800");
           }}
           setDefaultBackground={() => {
-            console.log("bye");
             setGradient(active.background);
           }}
         >
