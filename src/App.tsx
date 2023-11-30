@@ -3,11 +3,11 @@ import {
   NavBar,
   Content,
   NavBarElement,
-  CardWrapper,
+  CardWrapper
 } from "components";
 import { ActiveScreen } from "interfaces";
+import IntroPage from "pages/Intro";
 import { useState } from "react";
-
 const App = () => {
   const [active,setActive] = useState<ActiveScreen>({
     currentIndex: 3,
@@ -20,7 +20,8 @@ const App = () => {
   return (
     <Container gradient={gradient}>
       <Content>
-        <CardWrapper activeIndex={active.currentIndex} index={1}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dignissimos a repudiandae inventore praesentium sed earum incidunt explicabo tempore sint eaque dolor fugiat iste excepturi asperiores voluptatibus eos, odit id. Voluptatibus.</CardWrapper>
+        <IntroPage activeIndex={active.currentIndex} index={1}>
+        </IntroPage>
         <CardWrapper activeIndex={active.currentIndex} index={2}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem harum illum porro modi quos debitis assumenda placeat alias accusamus, explicabo molestias nemo culpa quibusdam? Nam illo labore voluptatum vitae. Mollitia.</CardWrapper>
         <CardWrapper activeIndex={active.currentIndex} index={3}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eos repudiandae tenetur voluptatem odio, rerum blanditiis reiciendis eum quod veritatis magnam dolores, perferendis magni, quasi natus numquam est obcaecati doloremque!</CardWrapper>
         <CardWrapper activeIndex={active.currentIndex} index={4}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed rerum quasi voluptatibus ipsum magnam quod nobis tempore velit culpa nemo est esse ut, qui, maxime laborum error nisi nihil. Nisi!</CardWrapper>

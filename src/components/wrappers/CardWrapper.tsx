@@ -17,7 +17,7 @@ const CardWrapper: React.FC<CardProp> = ({ children, activeIndex, index }) => {
   return (
     <div
       className={
-        "sm:absolute sm:rounded-lg transition duration-500 all lg:right-10 lg:w-3/4 sm:w-3/4 sm:h-5/6 bg-[#111010]" +
+        "sm:absolute sm:rounded-lg transition duration-500 all lg:right-10 lg:w-3/4 sm:w-3/4 sm:h-5/6 bg-[#111010] p-8" +
         classBuilder()
       }
     >
