@@ -1,13 +1,9 @@
-import {
-  Container,
-  NavBar,
-  Content,
-  NavBarElement,
-  CardWrapper,
-} from "components";
+import { Container, NavBar, Content, NavBarElement } from "components";
 import { ActiveScreen } from "interfaces";
+import ChatGptPage from "pages/ChatGpt";
+import ContactPage from "pages/Contact";
 import IntroPage from "pages/Intro";
-import WorkExperience from "pages/WorkExp";
+import WorkExperiencePage from "pages/WorkExp";
 import { useState } from "react";
 const App = () => {
   const [active, setActive] = useState<ActiveScreen>({
@@ -22,18 +18,9 @@ const App = () => {
     <Container gradient={gradient}>
       <Content>
         <IntroPage activeIndex={active.currentIndex} index={1} />
-        <WorkExperience activeIndex={active.currentIndex} index={2} />
-        <CardWrapper activeIndex={active.currentIndex} index={3}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet eos
-          repudiandae tenetur voluptatem odio, rerum blanditiis reiciendis eum
-          quod veritatis magnam dolores, perferendis magni, quasi natus numquam
-          est obcaecati doloremque!
-        </CardWrapper>
-        <CardWrapper activeIndex={active.currentIndex} index={4}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed rerum
-          quasi voluptatibus ipsum magnam quod nobis tempore velit culpa nemo
-          est esse ut, qui, maxime laborum error nisi nihil. Nisi!
-        </CardWrapper>
+        <WorkExperiencePage activeIndex={active.currentIndex} index={2} />
+        <ChatGptPage activeIndex={active.currentIndex} index={3} />
+        <ContactPage activeIndex={active.currentIndex} index={4} />
       </Content>
       <NavBar>
         <NavBarElement
