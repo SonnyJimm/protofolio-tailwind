@@ -6,15 +6,26 @@ type NavBarElementProp = {
   setBackground: Function;
   setDefaultBackground: Function;
   onClickSetActiveIndex: Function;
-  index:Number;
+  index: Number;
 };
 type ActiveScreen = {
   currentIndex: Number;
   background: String;
 };
 type CardProp = {
-  children: React.ReactNode;
+  children: React.ReactNode | null;
   activeIndex: Number;
-  index :Number;
-}
-export type { Props, ContainerProp, NavBarElementProp, ActiveScreen , CardProp};
+  index: Number;
+};
+type PageProp = {
+  activeIndex: Number;
+  index: Number;
+};
+export type {
+  Props,
+  ContainerProp,
+  NavBarElementProp,
+  ActiveScreen,
+  CardProp,
+  PageProp,
+};
