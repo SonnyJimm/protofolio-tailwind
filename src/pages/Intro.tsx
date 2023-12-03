@@ -32,7 +32,7 @@ const IntroPage: React.FC<PageProp> = ({ activeIndex, index }) => {
 
       <PageHeaderMid>SkillSet</PageHeaderMid>
       <Paragraph>
-        The main techonoly that i use is Golang and React.js but im not only
+        The main technology that i use is Golang and React.js but im not only
         limited to these technologies i have been constantly improving myself
         and exploring new technologies.
       </Paragraph>

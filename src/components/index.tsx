@@ -9,6 +9,8 @@ import SkillCardWrapper from "./wrappers/SkillCardWrapper";
 import Paragraph from "./wrappers/Paragraph";
 import PageHeaderSmall from "./wrappers/PageHeaderSmall";
 import PageHeaderMid from "./wrappers/PageHeaderMid";
+import List from "./wrappers/List";
+import ListItem from "./wrappers/ListItem";
 export {
   Container,
   Content,
@@ -21,4 +23,6 @@ export {
   PageHeaderSmall,
   SkillCardWrapper,
   PageHeaderMid,
+  List,
+  ListItem,
 };
