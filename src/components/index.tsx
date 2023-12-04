@@ -11,6 +11,11 @@ import PageHeaderSmall from "./wrappers/PageHeaderSmall";
 import PageHeaderMid from "./wrappers/PageHeaderMid";
 import List from "./wrappers/List";
 import ListItem from "./wrappers/ListItem";
+
+import ChatWrapper from "./Chat/ChatWrapper";
+import ChatClient from "./Chat/ChatClient";
+import ChatServer from "./Chat/ChatServer";
+
 export {
   Container,
   Content,
@@ -25,4 +30,7 @@ export {
   PageHeaderMid,
   List,
   ListItem,
+  ChatWrapper,
+  ChatClient,
+  ChatServer,
 };

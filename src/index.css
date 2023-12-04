@@ -13,3 +13,12 @@ body {
   --container-grad-chat: #6e0353;
   --container-grad-contact: #2a0636;
 }
+textarea {
+  all: unset;
+}
+button {
+  all: unset;
+}
+input {
+  all: unset;
+}

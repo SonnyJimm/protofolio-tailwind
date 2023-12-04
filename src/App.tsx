@@ -7,7 +7,7 @@ import WorkExperiencePage from "pages/WorkExp";
 import { useState } from "react";
 const App = () => {
   const [active, setActive] = useState<ActiveScreen>({
-    currentIndex: 3,
+    currentIndex: 1,
     background: "sm:to-violet-900",
   });
   const setActiveIndex = (index: Number) => {
