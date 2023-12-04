@@ -21,6 +21,11 @@ type PageProp = {
   activeIndex: Number;
   index: Number;
 };
+type Conversation = {
+  role: String;
+  message: String;
+};
+
 export type {
   Props,
   ContainerProp,
@@ -28,4 +33,5 @@ export type {
   ActiveScreen,
   CardProp,
   PageProp,
+  Conversation,
 };

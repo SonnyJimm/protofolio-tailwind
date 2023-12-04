@@ -15,6 +15,7 @@ import ListItem from "./wrappers/ListItem";
 import ChatWrapper from "./Chat/ChatWrapper";
 import ChatClient from "./Chat/ChatClient";
 import ChatServer from "./Chat/ChatServer";
+import InputField from "./Chat/InputField";
 
 export {
   Container,
@@ -33,4 +34,5 @@ export {
   ChatWrapper,
   ChatClient,
   ChatServer,
+  InputField
 };
