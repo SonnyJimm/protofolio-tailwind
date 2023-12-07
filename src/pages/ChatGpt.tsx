@@ -7,6 +7,7 @@ import {
   Paragraph,
   InputField,
 } from "components";
+import { error } from "console";
 import { Conversation, PageProp } from "interfaces";
 import { useState } from "react";
 
@@ -17,8 +18,45 @@ const ChatGptPage: React.FC<PageProp> = ({ activeIndex, index }) => {
       message: "Hello how can i help you",
     },
   ]);
-  const sendPrompt = (prompt: string) => {
-    setConversation([...conversations, { role: "user", message: prompt }]);
+  const sendPrompt = async (prompt: string, callback: Function) => {
+    conversations.push({ role: "user", message: prompt });
+    setConversation([...conversations]);
+    try {
+      const response = await fetch(
+        // you function url here
+        "https://rlp46ba7j2dphigklcbwbtrtse0dvzpq.lambda-url.us-east-1.on.aws/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            message: prompt,
+          }),
+        }
+      );
+      const reader = response.body?.getReader();
+      if (!reader) {
+        throw new Error("body not readable");
+      }
+      const decoder = new TextDecoder();
+      // Process the chunks from the stream
+      const prompts = { role: "server", message: "" };
+      conversations.push(prompts);
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) {
+          break;
+        }
+        const text = decoder.decode(value);
+        prompts.message += text;
+        setConversation([...conversations]);
+      }
+    } catch (e) {
+      console.log(e);
+    } finally {
+      callback();
+    }
   };
   return (
     <CardWrapper activeIndex={activeIndex} index={index}>
