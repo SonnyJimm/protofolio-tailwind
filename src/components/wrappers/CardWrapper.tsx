@@ -21,7 +21,7 @@ const CardWrapper: React.FC<CardProp> = ({ children, activeIndex, index }) => {
         classBuilder()
       }
     >
-      <div className="sm:w-100 sm:h-full sm:overflow-y-scroll ">{children}</div>
+      <div className="sm:w-100 sm:h-full sm:overflow-y-scroll px-5">{children}</div>
     </div>
   );
 };

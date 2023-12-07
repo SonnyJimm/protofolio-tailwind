@@ -60,7 +60,7 @@ const App = () => {
           Chat With AI
         </NavBarElement>
         <NavBarElement
-          index={3}
+          index={4}
           onClickSetActiveIndex={setActiveIndex}
           setBackground={() => {
             setGradient("sm:to-rose-900");

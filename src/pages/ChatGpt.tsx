@@ -7,7 +7,6 @@ import {
   Paragraph,
   InputField,
 } from "components";
-import { error } from "console";
 import { Conversation, PageProp } from "interfaces";
 import { useState } from "react";
 
@@ -21,6 +20,7 @@ const ChatGptPage: React.FC<PageProp> = ({ activeIndex, index }) => {
   const sendPrompt = async (prompt: string, callback: Function) => {
     conversations.push({ role: "user", message: prompt });
     setConversation([...conversations]);
+    const el = document.getElementById("chats");
     try {
       const response = await fetch(
         // you function url here
@@ -51,6 +51,7 @@ const ChatGptPage: React.FC<PageProp> = ({ activeIndex, index }) => {
         const text = decoder.decode(value);
         prompts.message += text;
         setConversation([...conversations]);
+        el?.scrollTo(0, el.scrollHeight);
       }
     } catch (e) {
       console.log(e);
