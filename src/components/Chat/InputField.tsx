@@ -1,11 +1,18 @@
+import { InputProp } from "interfaces";
 import { useState } from "react";
 
-const InputField: React.FC = () => {
+const InputField: React.FC<InputProp> = ({ sendPrompt }) => {
   const [input, setInput] = useState<string>("");
   const onChange = (e: React.FormEvent<HTMLTextAreaElement>) => {
     setInput(e.currentTarget.value);
   };
-
+  const onSubmit = () => {
+    if (input.length === 0) {
+      return;
+    }
+    sendPrompt(input);
+    setInput("");
+  };
   return (
     <div className="flex flex-row my-2 gap-2 h-12 mx-1">
       <div className="flex w-full">
@@ -16,7 +23,10 @@ const InputField: React.FC = () => {
         />
       </div>
       <div className="flex flex-row-reverse">
-        <button className=" h-16 w-16 rounded-md align-middle text-center bg-[#4d39a6] disabled:opacity-50 active:opacity-50 disabled:cursor-not-allowed">
+        <button
+          className=" h-16 w-16 rounded-md align-middle text-center bg-[#4d39a6] disabled:opacity-50 active:opacity-50 disabled:cursor-not-allowed"
+          onClick={onSubmit}
+        >
           Send
         </button>
       </div>

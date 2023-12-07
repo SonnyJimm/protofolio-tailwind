@@ -11,12 +11,15 @@ import { Conversation, PageProp } from "interfaces";
 import { useState } from "react";
 
 const ChatGptPage: React.FC<PageProp> = ({ activeIndex, index }) => {
-  const [conversations] = useState<Conversation[]>([
+  const [conversations, setConversation] = useState<Conversation[]>([
     {
       role: "server",
       message: "Hello how can i help you",
     },
   ]);
+  const sendPrompt = (prompt: string) => {
+    setConversation([...conversations, { role: "user", message: prompt }]);
+  };
   return (
     <CardWrapper activeIndex={activeIndex} index={index}>
       <PageHeader>ChatGpt plugin</PageHeader>
@@ -39,7 +42,7 @@ const ChatGptPage: React.FC<PageProp> = ({ activeIndex, index }) => {
           );
         })}
       </ChatWrapper>
-      <InputField />
+      <InputField sendPrompt={sendPrompt} />
     </CardWrapper>
   );
 };

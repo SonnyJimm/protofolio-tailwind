@@ -26,6 +26,10 @@ type Conversation = {
   message: String;
 };
 
+type InputProp = {
+  sendPrompt: Function;
+};
+
 export type {
   Props,
   ContainerProp,
@@ -34,4 +38,5 @@ export type {
   CardProp,
   PageProp,
   Conversation,
+  InputProp,
 };
