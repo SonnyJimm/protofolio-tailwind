@@ -69,7 +69,7 @@ const App = () => {
             setGradient(active.background);
           }}
         >
-          Contact me
+          Contacts
         </NavBarElement>
       </NavBar>
     </Container>
