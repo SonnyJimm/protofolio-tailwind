@@ -6,6 +6,21 @@ module.exports = {
       boxShadow: {
         "3xl": "0px 0px 4px 0px rgba(255, 255, 255, 0.3)",
       },
+      keyframes: {
+        popIn: {
+          "0%": {
+            transform: "scale(0)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+        },
+      },
+      animation: {
+        pop: "popIn 800ms linear",
+      },
     },
   },
   screens: {

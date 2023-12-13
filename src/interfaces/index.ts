@@ -30,6 +30,14 @@ type InputProp = {
   sendPrompt: Function;
 };
 
+type FormInputProps = {
+  name: string;
+  value: string;
+  placeHolder:string;
+  onChange: Function;
+  error: string;
+}
+
 export type {
   Props,
   ContainerProp,
@@ -39,4 +47,5 @@ export type {
   PageProp,
   Conversation,
   InputProp,
+  FormInputProps,
 };

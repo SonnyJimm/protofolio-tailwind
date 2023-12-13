@@ -17,6 +17,8 @@ import ChatClient from "./Chat/ChatClient";
 import ChatServer from "./Chat/ChatServer";
 import InputField from "./Chat/InputField";
 
+import InputComponent from "./Contact/InputComponent";
+
 export {
   Container,
   Content,
@@ -34,5 +36,6 @@ export {
   ChatWrapper,
   ChatClient,
   ChatServer,
-  InputField
+  InputField,
+  InputComponent,
 };

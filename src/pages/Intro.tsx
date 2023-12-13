@@ -44,7 +44,7 @@ const IntroPage: React.FC<PageProp> = ({ activeIndex, index }) => {
         <SkillCard>Python</SkillCard>
         <SkillCard>Ruby</SkillCard>
       </SkillCardWrapper>
-      <PageHeaderSmall>FrameWorks</PageHeaderSmall>
+      <PageHeaderSmall>Frameworks</PageHeaderSmall>
       <SkillCardWrapper>
         <SkillCard>GoFiber</SkillCard>
         <SkillCard>React.js</SkillCard>

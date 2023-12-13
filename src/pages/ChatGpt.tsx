@@ -37,7 +37,7 @@ const ChatGptPage: React.FC<PageProp> = ({ activeIndex, index }) => {
       );
       const reader = response.body?.getReader();
       if (!reader) {
-        throw new Error("body not readable");  
+        throw new Error("body not readable");
       }
       const decoder = new TextDecoder();
       // Process the chunks from the stream
