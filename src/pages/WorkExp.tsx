@@ -14,6 +14,32 @@ const WorkExperiencePage: React.FC<PageProp> = ({ activeIndex, index }) => {
   return (
     <CardWrapper activeIndex={activeIndex} index={index}>
       <PageHeader>Professional Experience</PageHeader>
+      <PageHeaderSmall>
+        Full-stack Developer Seed Approach 2024 – present
+      </PageHeaderSmall>
+      <List>
+        <ListItem>
+          Implemented Social login for mobile, web, backend for ease of use for
+          customers.
+        </ListItem>
+        <ListItem>
+          Refactoring old code base on React and React Native.
+        </ListItem>
+        <ListItem>
+          Implement native components on React native to improve performance.
+        </ListItem>
+        <ListItem>Implemented CICD pipeline for deployment.</ListItem>
+      </List>
+      <SkillCardWrapper>
+        <SkillCard>React</SkillCard>
+        <SkillCard>Redux</SkillCard>
+        <SkillCard>React Native</SkillCard>
+        <SkillCard>Java</SkillCard>
+        <SkillCard>SpringBoot</SkillCard>
+        <SkillCard>MySQL</SkillCard>
+        <SkillCard>AWS</SkillCard>
+        <SkillCard>RespAPI</SkillCard>
+      </SkillCardWrapper>
       <PageHeaderSmall>Zamdaa LLC 2021-2022 Backend developer</PageHeaderSmall>
       <Paragraph>
         An online platform connecting car renters with car rental businesses
@@ -50,6 +76,7 @@ const WorkExperiencePage: React.FC<PageProp> = ({ activeIndex, index }) => {
       <SkillCardWrapper>
         <SkillCard>Golang</SkillCard>
         <SkillCard>GoFiber</SkillCard>
+        <SkillCard>React</SkillCard>
         <SkillCard>PostreSQL</SkillCard>
         <SkillCard>Docker</SkillCard>
         <SkillCard>AWS</SkillCard>
@@ -81,7 +108,7 @@ const WorkExperiencePage: React.FC<PageProp> = ({ activeIndex, index }) => {
         <SkillCard>Heroku</SkillCard>
       </SkillCardWrapper>
       <PageHeaderSmall>
-        Odo EcoSystem 2020 – 2021 Software Developer Intern
+        Odo EcoSystem 2020 – 2021 Software Developer
       </PageHeaderSmall>
       <Paragraph>
         Provides web marketing, web system development, and smartphone

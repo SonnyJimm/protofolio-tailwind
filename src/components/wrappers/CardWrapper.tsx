@@ -8,10 +8,10 @@ const CardWrapper: React.FC<CardProp> = ({ children, activeIndex, index }) => {
     }
     if (activeIndex > index) {
       // card is left to the active
-      return " sm:scale-90 sm:-translate-x-20 sm:z-10 sm:opacity-40";
+      return " sm:scale-90 sm:-translate-x-20 sm:z-10 sm:opacity-0";
     } else {
       //card is right to the active
-      return " sm:scale-90 sm:translate-x-20 sm:z-10 sm:opacity-40";
+      return " sm:scale-90 sm:translate-x-20 sm:z-10 sm:opacity-0";
     }
   };
   return (

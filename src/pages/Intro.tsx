@@ -23,9 +23,8 @@ const IntroPage: React.FC<PageProp> = ({ activeIndex, index }) => {
         </div>
         <div className="flex sm:w-4/6 h-max border-l-2 border-l-indigo-700 px-4 m-auto text-base">
           <Paragraph>
-            My name is Tserenpuntsag Zorigt (Jimmy). Im a Back End developer
-            with 2 years of experience. I enjoy experimenting with new
-            technologies.
+            My name is Tserenpuntsag Zorigt (Jimmy). Im a Full Stack developer
+            who loves experimenting with new technologies.
           </Paragraph>
         </div>
       </div>
@@ -48,6 +47,8 @@ const IntroPage: React.FC<PageProp> = ({ activeIndex, index }) => {
       <SkillCardWrapper>
         <SkillCard>GoFiber</SkillCard>
         <SkillCard>React.js</SkillCard>
+        <SkillCard>React Native</SkillCard>
+        <SkillCard>Next.js</SkillCard>
         <SkillCard>SpringBoot</SkillCard>
         <SkillCard>Flask</SkillCard>
         <SkillCard>Ruby on Rails</SkillCard>
@@ -70,11 +71,6 @@ const IntroPage: React.FC<PageProp> = ({ activeIndex, index }) => {
         <SkillCard>EKS</SkillCard>
         <SkillCard>CloudFormation</SkillCard>
       </SkillCardWrapper>
-      <PageHeaderMid>The role im looking for</PageHeaderMid>
-      <Paragraph>
-        Im currently looking for Back-End developer position. If im given the
-        chances i want to work with IoT devices and realtime application.
-      </Paragraph>
     </CardWrapper>
   );
 };
